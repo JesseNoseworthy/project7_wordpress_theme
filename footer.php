@@ -1,6 +1,8 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  	<div class="footer">
+	    <p>&copy; A WordPress theme by Jesse Noseworthy <?php echo date('Y'); ?></p>
+   </div>
   </div>
 </footer>
 

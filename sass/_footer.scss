@@ -1,3 +1,17 @@
+$theme-blue: #091D42;
+
 footer {
 	clear: both;
+	background: $theme-blue;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	font-size: 1rem;
+	letter-spacing: 0.055rem;
+
+	p {
+		margin: 0;
+	}
 }

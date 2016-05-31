@@ -19,16 +19,21 @@ Default Styling
 ====================================
 */
 
+$theme-blue: #091D42;
+$theme-gold: #CC9D52;
+
 img {
 	max-width: 100%;
 }
 
 body {
-	color: #333;
+	color: $theme-gold;
+	font-family: 'Helvetica Neue', sans-serif;
+	letter-spacing: 0.055rem;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1600px;
 	margin: 0 auto;
 }
 
@@ -42,6 +47,91 @@ body {
 	width: 100%;
 }
 
+.top-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	height: 80px;
+	font-size: 1.75rem;
+	
+	.top-nav-title-first {
+		color: black;
+	}
+	.top-nav-title,
+	.top-nav-links {
+		@extend .top-nav;
+		padding: 0 20px;
+		width: 50%;
+		li {
+			list-style-type: none;
+			padding: 0 20px;
+		}
+	}
+
+	.top-nav-title {
+		justify-content: flex-start;
+		font-size: 2.5rem;
+
+		a {
+			color: $theme-gold;
+		}
+	}
+
+	ul.menu li a {
+		justify-content: flex-end;
+		text-transform: lowercase;
+		font-weight: 100;
+		background: none;
+		color: $theme-gold;
+		transition: .3s ease;
+
+		&:hover {
+			color: $theme-blue;
+		}
+	}
+}
+
+.hero {
+	background: linear-gradient(transparentize($theme-blue, .5), transparentize($theme-blue, .5)), url('images/hero.jpeg');
+	background-size: cover;
+	width: 100%;
+	height: 625px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.hero-content {
+		text-align: center;
+		border: 2.5px solid $theme-gold;
+		outline: 3.5px solid $theme-gold;
+		outline-offset: 14px;
+		height: 250px;
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.hero-name {
+		h1 {
+			font-style: oblique;
+			margin: 5px;
+			font-size: 3.75rem;
+			font-weight: 100;
+		}
+	}
+
+	.hero-title {
+		font-family: Georgia;
+		font-style: italic;
+		h1 {
+			margin: 5px;
+		}
+	}
+}
 
 
 

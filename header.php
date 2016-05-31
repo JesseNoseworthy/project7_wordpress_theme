@@ -15,16 +15,27 @@
 
 <header>
   <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
-    <?php wp_nav_menu( array(
+    <div class="top-nav">
+      <ul class="top-nav-title">
+        <a href="<?php echo home_url( '/' ); ?>">
+          <li><span class="top-nav-title-first">J</span>S</li>
+        </a>
+      </ul>
+     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-  </div> <!-- /.container -->
+    </div>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-name">
+          <h1>John Smith</h1>
+        </div>
+        <div class="hero-title">
+          <h1>Front-end Web Developer</h1>
+        </div>
+      </div>
+    </div>
+  </div>
 </header><!--/.header-->
 
