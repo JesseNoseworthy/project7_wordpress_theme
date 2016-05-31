@@ -18,3 +18,4 @@ gulp.task('bs', function() {
 ```
 
 
+# project7_wordpress_theme
