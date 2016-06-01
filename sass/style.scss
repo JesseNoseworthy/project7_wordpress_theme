@@ -27,7 +27,7 @@ img {
 }
 
 body {
-	color: $theme-gold;
+	color: $theme-blue;
 	font-family: 'Helvetica Neue', sans-serif;
 	letter-spacing: 0.055rem;
 }
@@ -39,8 +39,8 @@ body {
 
 .content {
 	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 80%;
+	margin: 20px 10%;
 }
 
 .full {
@@ -102,6 +102,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	color: $theme-gold;
 
 	.hero-content {
 		text-align: center;
@@ -132,6 +133,53 @@ body {
 		}
 	}
 }
+
+.secondary-header {
+	background: $theme-blue;
+	color: $theme-gold;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.content.blog, 
+.content.single-post {
+	padding: 0 10%;
+	color: $theme-blue;
+	margin-bottom: 50px;
+	width: 100%;
+
+	h2 {
+		border-bottom: 2px solid $theme-gold;
+		padding-bottom: 15px;
+	}
+
+	.blog-image-parent {
+		width: 100%;
+		text-align: center;
+	}
+	.blog-image {
+		width: 50%;
+		height: auto;
+		margin: 50px 0;
+	}
+}
+
+#nav-below {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+
+	.nav-previous,
+	.nav-next {
+		p {
+			display: inline;
+		}
+	}
+}
+
 
 
 

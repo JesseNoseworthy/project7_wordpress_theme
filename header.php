@@ -10,6 +10,10 @@
   <?php wp_head(); ?>
 </head>
 
+<?php 
+  $blog_title = get_bloginfo( 'title' );
+  $blog_explode = explode(" ", $blog_title);
+?>
 
 <body <?php body_class(); ?>>
 
@@ -18,23 +22,18 @@
     <div class="top-nav">
       <ul class="top-nav-title">
         <a href="<?php echo home_url( '/' ); ?>">
-          <li><span class="top-nav-title-first">J</span>S</li>
+          <li>
+          <span class="top-nav-title-first">
+            <?php echo substr($blog_explode[0], 0, 1); ?>
+          </span>
+            <?php echo substr($blog_explode[1], 0, 1); ?>
+          </li>
         </a>
       </ul>
      <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
-    </div>
-    <div class="hero">
-      <div class="hero-content">
-        <div class="hero-name">
-          <h1>John Smith</h1>
-        </div>
-        <div class="hero-title">
-          <h1>Front-end Web Developer</h1>
-        </div>
-      </div>
     </div>
   </div>
 </header><!--/.header-->

@@ -3,9 +3,16 @@
 	float: left;
 	ul {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 50px 0;
 		li {
 			list-style: none;
+			padding: 7px 0;
+			color: #091D42;
 		}
 	}
+
+	a {
+		color: #091D42;
+	}
+
 }

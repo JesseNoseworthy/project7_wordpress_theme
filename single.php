@@ -2,10 +2,11 @@
 
 <div class="main">
   <div class="container">
-    <div class="content">
+    <div class="single-post content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+         </div>
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
@@ -19,11 +20,6 @@
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
-
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
         <div id="nav-below" class="navigation">
@@ -36,8 +32,6 @@
       <?php endwhile; // end of the loop. ?>
 
     </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
