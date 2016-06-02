@@ -13,7 +13,6 @@
       </div>
     </div>
   </div>
-
     <div class="content portfolio-gallery">
         <?php
            global $post;
