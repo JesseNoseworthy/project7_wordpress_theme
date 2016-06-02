@@ -147,10 +147,11 @@ body {
 
 .content.blog, 
 .content.single-post {
-	padding: 0 10%;
+	width: calc(70% - 20%);
+	padding: 0 3%;
 	color: $theme-blue;
 	margin-bottom: 50px;
-	width: 100%;
+	
 
 	h2 {
 		border-bottom: 2px solid $theme-gold;
@@ -167,11 +168,15 @@ body {
 		margin: 50px 0;
 	}
 }
-
+.content.single-post {
+	width: 80%;
+	
+}
 #nav-below {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 10px;
+	margin: 0 10%;
 
 	.nav-previous,
 	.nav-next {
