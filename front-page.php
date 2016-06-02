@@ -14,9 +14,21 @@
     </div>
   </div>
 
-    <div class="content">
-    		<?php get_template_part( 'loop', 'index' );	?>
-    </div> <!--/.content -->
+    <div class="content portfolio-gallery">
+        <?php
+           global $post;
+           $myposts = get_posts('numberposts=6&category=1');
+           foreach($myposts as $post) :
+         ?>
+       <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+      <div class="blog-article" style="background-image: url('<?php echo $image[0]; ?>'); background-size: cover;">
+      <div class="portfolio-content">  
+        <h3><?php the_title(); ?></h3>
+        <p>Posted by <?php the_author(); ?> on <?php the_date() ?></p>
+        </div>
+      </div>
+     <?php endforeach; ?>
+  </div> <!--/.content -->
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

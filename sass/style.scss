@@ -186,10 +186,39 @@ body {
 	}
 }
 
+.about {
+	.bio-image,
+	.bio {
+		float: left;
+	}
 
+	.bio-image {
+		margin: 0 5% 0 0;
+		width: calc(280px - 5%);
+		height: auto;
+	}
 
+	.bio {
+		padding: 0 0 75px 0;
+		width: calc(90% - (280px - 5%));
+	}
+}
 
+.portfolio-gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 
+.blog-article {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 20px;
+	width: calc(100% / 3 - 40px);
+	height: 300px;
+}
 
-
-
+.portfolio-content {
+	background: green;
+}

@@ -285,6 +285,6 @@ function get_excerpt($count){
   $excerpt = strip_tags($excerpt);
   $excerpt = substr($excerpt, 0, $count);
   $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-  $excerpt = $excerpt.'... <a href="'.$permalink.'">more</a>';
+  $excerpt = $excerpt.'<a href="'.$permalink.'"> ... read full post</a>';
   return $excerpt;
 }
