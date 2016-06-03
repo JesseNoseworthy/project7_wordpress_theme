@@ -11,11 +11,8 @@ Template Name: Contact Page
     <div class="content contact">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-      	<?php $image = get_field('bio_image'); ?>
-		<img class="bio-image" src="<?php echo $image['sizes']['medium'] ?>">
-      	<p class="bio"><?php the_field('bio'); ?></p>
-        <p><?php the_excerpt(50) ?></p>
-
+      	<?php $image = get_field('contact_image'); ?>
+		<img class="contact-image" src="<?php echo $image['sizes']['large'] ?>">
         <?php the_content(); ?>
 
       <?php endwhile; // end the loop?>

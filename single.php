@@ -4,7 +4,8 @@
   <div class="container">
     <div class="single-post content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
+        <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+          <div class="post-image-head single-post-image" style="background: url(' <?php echo $thumb['0']; ?> '); background-size: cover; background-position-y: 45%;"></div>
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
          </div>
           <h1 class="entry-title"><?php the_title(); ?></h1>

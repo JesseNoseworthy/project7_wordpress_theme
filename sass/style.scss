@@ -73,23 +73,29 @@ body {
 	.top-nav-title {
 		justify-content: flex-start;
 		font-size: 2.5rem;
+		letter-spacing: -0.3rem;
+		width: 30%;
 
 		a {
 			color: $theme-gold;
 		}
 	}
 
-	ul.menu li a {
-		justify-content: flex-end;
-		text-transform: lowercase;
-		font-weight: 100;
-		background: none;
-		color: $theme-gold;
-		transition: .3s ease;
 
-		&:hover {
-			color: $theme-blue;
-		}
+	.current-menu-item a {
+		color: $theme-blue;
+	}
+}
+ul.menu li a {
+	justify-content: flex-end;
+	text-transform: lowercase;
+	font-weight: 100;
+	background: none;
+	color: $theme-gold;
+	transition: .3s ease;
+
+	&:hover {
+		color: $theme-blue;
 	}
 }
 
@@ -294,23 +300,45 @@ body {
 
 .content.contact {
 	form {
-		width: 500px;
-		float: right;
+		width: calc(100% - 540px - 40px);
+		margin: 0 20px;
 		margin-bottom: 50px;
 	}
 	color: $theme-blue;
-	input[type="text"] {
-		height: 35px;
+	input[type="text"], input[type="email"] {
+		height: 40px;
+		border: none;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		border-bottom: 2px solid $theme-gold;
+		font-size: 1rem;
+	}
+	::-webkit-input-placeholder,
+	::-webkit-textarea-placeholder {
+		color: $theme-blue;
 	}
 	input, textarea[name="your-message"] {
 		width: 500px;
-		border-radius: 4px;
+		max-width: 500px;
 		margin-top: 5px;
+		border: none;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		border-bottom: 2px solid $theme-gold;
 	}
 
 	input[type="submit"] {
-		height: 35px;
+		margin-top: 40px;
+		width: 150px;
+		height: 40px;
+		line-height: 20px;
 		background: $theme-gold;
+		box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
+		transition: .75s ease;
+
+		&:hover {
+			box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+		}
 	}
 }
 
@@ -345,4 +373,23 @@ body {
 
 .post-image-head {
 	height: 250px;
+}
+
+.blog-post .read-full-post {
+	font-weight: 800;
+}
+
+.single-post-image {
+	margin-top: 50px;
+}
+
+.contact-image {
+	width: calc(500px - 40px);
+	margin: 0 20px;
+	height: auto;
+}
+
+.contact {
+	margin-bottom: 100px;
+	display: flex;
 }

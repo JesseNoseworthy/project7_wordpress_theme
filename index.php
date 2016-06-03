@@ -19,10 +19,10 @@
 				?>
 					<article class="blog-post">
 
+					<h2><?php the_title(); ?></h2>
 					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 						<div class="post-image-head" style="background: url(' <?php echo $thumb['0']; ?> '); background-size: cover; background-position-y: 45%;"></div>
-						<h2><?php the_title(); ?></h2>
-						<p>Posted on <?php the_date() ?></p>
+						<p>Posted on <?php the_time("F d, Y");  ?></p>
 						<?php echo get_excerpt(500); ?>
 					</article>
 				<?php 
