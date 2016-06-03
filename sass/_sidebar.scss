@@ -2,8 +2,8 @@
 	width: calc(50% - 20%);
 	float: left;
 	ul {
-		margin: 0 10%;
-		padding: 0 3%;
+		margin: 10% 10% 0 0;
+		padding: 0 3% 0 0;
 		li {
 			list-style: none;
 			padding: 7px 0;
@@ -11,8 +11,16 @@
 		}
 	}
 
+	h3 {
+		margin-bottom: 0;
+	}
+
 	a {
 		color: #091D42;
+		transition: .3s ease;
+		&:hover {
+			color: #CC9D52;
+		}
 	}
 
 }

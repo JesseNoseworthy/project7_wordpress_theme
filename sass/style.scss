@@ -135,7 +135,7 @@ body {
 
 .secondary-header {
 	color: $theme-gold;
-	height: 35vh;
+	height: 40vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -143,17 +143,22 @@ body {
 	background-position: center !important;
 
 	h1 {
-		// @extend ul.menu li a;
+		justify-content: flex-end;
+		text-transform: lowercase;
+		font-weight: 100;
+		background: none;
+		color: $theme-gold;
+		font-size: 4rem;
 	}
 
 }
 
 .content.blog, 
 .content.single-post {
-	width: calc(70% - 20%);
+	width: calc(80%);
 	padding: 0 3%;
 	color: $theme-blue;
-	margin-bottom: 50px;
+	margin: 0 10% 50px 10%;
 	
 
 	h2 {
@@ -173,7 +178,10 @@ body {
 }
 .content.single-post {
 	width: 80%;
-	
+}
+
+.blog-post {
+	margin-top: 60px;
 }
 #nav-below {
 	display: flex;
@@ -222,7 +230,13 @@ body {
 	height: 300px;
 	position: relative;
 }
+.read-full-post {
+	transition: .3 ease;
 
+	&:hover {
+		color: $theme-blue;
+	}
+}
 .portfolio-content {
 	background: $theme-blue;
 	color: $theme-gold;
@@ -236,10 +250,11 @@ body {
 	left: 0;
 	height: 30%;
 	width: 100%;
+	font-style: italic;
 
 	&:hover {
 		padding-right: 20px;
-		background: rgba(9,29,66,0.9);
+		background: rgba(9,29,66,0.95);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -251,9 +266,13 @@ body {
 			border: 1px solid $theme-blue;
 			box-shadow: 0px 0px 2px 3px $theme-blue;
 			background: $theme-gold;
-			color: $theme-blue;
+			color: white;
+			font-style: normal;
+			font-family: Georgia, serif;
 			&:hover {
 				box-shadow: 0px 3px 2px 3px $theme-blue;
+				transform: scale(1.04);
+				border: none;
 			}
 		}
 	}
@@ -298,5 +317,32 @@ body {
 .portfolio-head {
 	@extend .content;
 	border-bottom: 4px solid $theme-gold;
-	padding-bottom: 15px;
+	h1 {
+		padding-bottom: 0;
+		margin-bottom: 15px;
+		font-weight: 100;
+		font-family: Georgia, serif;
+		font-style: italic;
+		font-size: 3.5rem;
+		letter-spacing: 0.085rem;
+	}
+}
+
+.bio {
+	ul.menu li a {
+		background: none;
+		font-size: 2rem;
+		float: right;
+		transition: .3s ease;
+		.fa {
+			color: $theme-blue;
+			&:hover {
+				transform: scale(1.06);
+			}
+		}
+	}
+}
+
+.post-image-head {
+	height: 250px;
 }
