@@ -13,6 +13,9 @@
       </div>
     </div>
   </div>
+    <div class="portfolio-head">
+      <h1>Portfolio</h1>
+    </div>
     <div class="content portfolio-gallery">
         <?php
            global $post;
@@ -23,7 +26,7 @@
       <div class="blog-article" style="background-image: url('<?php echo $image[0]; ?>'); background-size: cover;">
       <div class="portfolio-content">  
         <h3><?php the_title(); ?></h3>
-        <p>Posted by <?php the_author(); ?> on <?php the_date() ?></p>
+        <?php echo get_excerpt(500); ?>
         </div>
       </div>
      <?php endforeach; ?>
