@@ -8,7 +8,7 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
-  <!-- Theme designed by Sylvia Nguyen -->
+  <!-- Theme designed by Sylvia Nguyen. Check out her work at 'http://sylvia.io/' -->
 </head>
 
 <?php 

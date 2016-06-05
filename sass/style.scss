@@ -397,6 +397,53 @@ ul.menu li a {
 	align-items: center;
 }
 
+.invalid {
+	position: relative;
+	height: 76vh;
+}
+
+.invalid-overlay {
+	position: absolute;
+	background-color: darken($theme-blue, 5%);
+	color: $theme-gold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+
+	h1 {
+		font-size: 5rem;
+		letter-spacing: 0.5rem;
+		margin: 0;
+	}
+
+	p {
+		width: 60%;
+		text-align: center;
+	}
+
+	input[type=search] {
+		padding: 5px;
+		font-size: 0.75rem;
+		width: 200px;
+	}
+	.searchsubmit {
+		background: $theme-gold;
+		color: $theme-blue;
+		border: none;
+		height: 30px;
+		border-radius: 5px;
+		width: 30%;
+		margin: 0 35%;
+		margin-top: 10px;
+	}
+}
+
 // MEDIA QUERIES
 
 @media screen and (max-width: 990px) {
