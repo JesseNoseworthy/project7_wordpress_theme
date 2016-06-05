@@ -10,7 +10,6 @@
 			  $page_title = get_the_title( get_option('page_for_posts', true) );
 			  $page_title_print = ucwords($page_title);
 			?>
-			<h1><?php echo $page_title_print; ?></h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sapiente iste quas incidunt facere, repudiandae vero cumque ratione unde, placeat est blanditiis nihil tempore eum odio. Necessitatibus sit ipsum repudiandae?</p>
 		</div>
     		<?php if(have_posts()) {
