@@ -10,10 +10,10 @@ Template Name: Contact Page
 
     <div class="content contact">
       <?php // Start the loop ?>
+      <?php $image = get_field('contact_image') ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-      	<?php $image = get_field('contact_image'); ?>
-		<img class="contact-image" src="<?php echo $image['sizes']['large'] ?>">
-        <?php the_content(); ?>
+        <div class="contact-image" style="background-image: url(' <?php echo $image['url']; ?> ');"> </div>
+        <?php the_content() ?>
 
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->

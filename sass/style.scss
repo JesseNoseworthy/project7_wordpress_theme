@@ -188,6 +188,10 @@ ul.menu li a {
 
 .blog-post {
 	margin-top: 60px;
+
+	p {
+		color: $theme-gold;
+	}
 }
 #nav-below {
 	display: flex;
@@ -238,6 +242,7 @@ ul.menu li a {
 }
 .read-full-post {
 	transition: .3 ease;
+	height: 50px;
 
 	&:hover {
 		color: $theme-blue;
@@ -300,8 +305,8 @@ ul.menu li a {
 
 .content.contact {
 	form {
-		width: calc(100% - 540px - 40px);
-		margin: 0 20px;
+		width: calc(50% - 60px);
+		margin: 0 30px;
 		margin-bottom: 50px;
 	}
 	color: $theme-blue;
@@ -334,11 +339,6 @@ ul.menu li a {
 		line-height: 20px;
 		background: $theme-gold;
 		box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.75);
-		transition: .75s ease;
-
-		&:hover {
-			box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-		}
 	}
 }
 
@@ -384,12 +384,160 @@ ul.menu li a {
 }
 
 .contact-image {
-	width: calc(500px - 40px);
-	margin: 0 20px;
-	height: auto;
+	width: calc(50% - 60px);
+	margin: -45px 30px 0 30px;
+	height: 485px;
+	background-size: cover;
+	background-position: center;
 }
 
 .contact {
 	margin-bottom: 100px;
 	display: flex;
+	align-items: center;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 990px) {
+	.blog-article {
+		width: calc(100% / 2 - 30px);
+		height: 350px;
+	}
+
+	.contact-image {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.hero .hero-content  {
+		width: 60%;
+	}
+
+	.top-nav .top-nav-title {
+		width: 20%;
+	}
+
+	.blog-article {
+		width: calc(100% - 30px);
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.top-nav {
+		flex-direction: column;
+		height: 135px;
+		justify-content: center;
+	}
+
+	.top-nav .top-nav-title {
+		width: 100%;
+		height: 75px;
+		margin: 20px 0;
+	}
+
+	#menu-main-menu {
+		margin-bottom: 20px;
+	}
+
+	.about {
+		.bio-image , .bio {
+			float: none;
+		}
+
+		.bio-image {
+			width: calc(100% / 3);
+			text-align: center;
+			margin: 0 33.33%;
+		}
+
+		.bio {
+			width: 80%;
+			margin: 0 10%;
+		}
+	}
+
+	.content.contact {
+		input, textarea[name="your-message"] {
+			width: 400px;
+			max-width: 400px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 510px) {
+	.hero .hero-content  {
+		width: 80%;
+	}
+
+	.top-nav .top-nav-title  {
+		height: 45px !important;
+	}
+	
+	.top-nav { 
+		justify-content: flex-start;
+		height: 250px;
+	}
+	#menu-main-menu {
+		height: 100px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.portfolio-head h1 {
+		font-size: 2.4rem;
+	}
+
+	.content.contact {
+		input, textarea[name="your-message"] {
+			width: 300px;
+			max-width: 300px;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.hero { 
+		.hero-content {
+			border: none;
+		}
+		.hero-name h1 {
+			font-size: 2.75rem;
+		}
+
+		.hero-title h1 {
+			font-size: 1.75rem;
+		}
+	}
+
+	.portfolio-content h3 {
+		font-size: 1rem;
+	}
+
+	.read-full-post {
+		font-size: 0.8rem;
+	}
+
+	.about .bio-image {
+		width: 60%;
+		text-align: center;
+		margin: 0 20%;
+	}
+	
+	.content.contact {
+		input, textarea[name="your-message"] {
+			width: 200px;
+			max-width: 200px;
+		}
+
+		input[type=submit] {
+			width: 80px;
+			font-size: 0.8rem;
+		}
+	}
+
 }
