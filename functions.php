@@ -289,5 +289,3 @@ function get_excerpt($count){
   $excerpt = $excerpt.'<a class="read-full-post" href="'.$permalink.'"> Read full post</a>';
   return $excerpt;
 }
-
-add_filter('show_admin_bar', '__return_false');
