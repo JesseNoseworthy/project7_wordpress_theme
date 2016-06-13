@@ -1,5 +1,4 @@
 <div class="main">
-  <div class="container">
 <?php  
   if ( is_page() ) {
    $background = wp_get_attachment_image_src( get_post_thumbnail_id( $page->ID ), 'full' ); ?>
@@ -20,5 +19,4 @@
   ?>
  	
 
-  </div> <!-- /.container -->
 </div> <!-- /.main -->
